@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Patrol</title>
+  <link rel="stylesheet" href="space-shooter.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+          <div class="brand"><span class="brand-icon">✦</span> STAR PATROL</div>
+      <div class="hud" aria-live="polite">
+        <div><span class="hud-label">SCORE</span><strong id="score">0000</strong></div>
+        <div><span class="hud-label">LIVES</span><strong id="lives">♥ ♥ ♥</strong></div>
+      </div>
+    </header>
+
+    <section class="game-card" aria-label="Space shooter game">
+      <div class="game-heading">
+        <div><p class="eyebrow">DEFEND THE GALAXY</p><h1>Star Patrol</h1></div>
+        <p class="instructions"><span class="key">←</span> <span class="key">→</span> move <span class="key">SPACE</span> fire</p>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game" aria-label="Game area. Move with arrow keys or A and D, fire with space."></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-panel">
+            <div class="big-star">✦</div>
+            <p class="eyebrow" id="overlay-eyebrow">READY, PILOT?</p>
+            <h2 id="overlay-title">The stars need you.</h2>
+            <p id="overlay-copy">Dodge the incoming asteroids and blast them before they reach your ship.</p>
+            <button id="start-button" type="button">Start mission <span>→</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="game-footer">
+        <span><i class="status-dot"></i> MISSION CONTROL ONLINE</span>
+        <span>Move: <b>← →</b> or <b>A D</b> &nbsp;·&nbsp; Fire: <b>SPACE</b></span>
+      </div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <button type="button" class="control-button" id="left-button" aria-label="Move left">←</button>
+        <button type="button" class="control-button fire-button" id="fire-button" aria-label="Fire">FIRE</button>
+        <button type="button" class="control-button" id="right-button" aria-label="Move right">→</button>
+      </div>
+    </section>
+    <p class="tip">Tip: keep moving. Your ship fires automatically while you hold SPACE.</p>
+  </main>
+  <script src="space-shooter.js"></script>
+</body>
+</html>
+
